@@ -1,3 +1,4 @@
 class Student < ApplicationRecord
-  belong_to :room
+  belongs_to :room
+  has_many :attendances
 end
