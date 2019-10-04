@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
-  resources :attendances
   namespace :api do
     namespace :v1 do 
-      resources :students
       resources :rooms
+      resources :students do
+        resources :attendances
+      end
     end
   end
 end
