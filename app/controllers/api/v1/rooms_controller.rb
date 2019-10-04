@@ -15,7 +15,7 @@ class Api::V1::RoomsController < ApplicationController
     @room = Room.new(room_params)
 
     if @room.save
-      render json: 
+      render json: @room
     else
       render json: {status: 500, message: "Unable to create room."}
     end
@@ -25,7 +25,7 @@ class Api::V1::RoomsController < ApplicationController
     if @room.update(room_params)
       render json: @room
     else
-      render json: {status: 500, message: "Unable to update room."}
+      render json:  {status: 500, message: "Unable to update room."}
     end
   end
 
