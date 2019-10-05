@@ -39,10 +39,6 @@ class Api::V1::StudentsController < ApplicationController
       @student = Student.find(params[:id])
     end
 
-    def set_room
-      @room = Room.find(params[:room_id])
-    end
-
     def student_params
       params.require(:student).permit(:first_name, :last_name, :age, :room_id)
     end
