@@ -29,8 +29,12 @@ class Api::V1::StudentsController < ApplicationController
     end
   end
 
-  def destroy
-    @student.destroy
+  def destroy     
+    if @student.destroy
+        render json: @student.id
+    else
+        render json: {status: 500, message: 'Student cannot be deleted'}
+    end
   end
 
   private
