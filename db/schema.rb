@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_06_235342) do
+ActiveRecord::Schema.define(version: 2019_10_10_171429) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "hstore"
@@ -38,6 +38,24 @@ ActiveRecord::Schema.define(version: 2019_10_06_235342) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "room_id"
+    t.string "street_address"
+    t.string "city"
+    t.string "state"
+    t.integer "zip"
+    t.string "dob"
+    t.string "allergies"
+    t.string "medications"
+    t.string "dr_name"
+    t.string "dr_phone"
+    t.string "contact1_name"
+    t.string "contact1_phone"
+    t.string "contact1_relationship"
+    t.string "contact2_name"
+    t.string "contact2_phone"
+    t.string "contact2_relationship"
+    t.string "contact3_name"
+    t.string "contact3_phone"
+    t.string "contact3_relationship"
     t.index ["room_id"], name: "index_students_on_room_id"
   end
 

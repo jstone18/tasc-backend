@@ -30,6 +30,7 @@ gem 'rack-cors'
 
 gem 'active_model_serializers'
 gem 'pry'
+gem "nilify_blanks"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
