@@ -1,5 +1,5 @@
 class AttendanceSerializer < ActiveModel::Serializer
-  attributes :id, :present, :absent, :student_id
+  attributes :id, :check_in, :check_out, :student_id
 
   belongs_to :student
 end
