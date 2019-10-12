@@ -10,15 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_10_171429) do
+ActiveRecord::Schema.define(version: 2019_10_11_224122) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "hstore"
   enable_extension "plpgsql"
 
   create_table "attendances", force: :cascade do |t|
-    t.boolean "present"
-    t.boolean "absent"
+    t.boolean "check_in"
+    t.boolean "check_out"
     t.bigint "student_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
