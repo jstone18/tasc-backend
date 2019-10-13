@@ -16,7 +16,7 @@ class Api::V1::AttendancesController < ApplicationController
     @attendance = @student.attendances.new(attendance_params)
 
     if @attendance.save
-      render json: @attendance
+      render json: @student 
     else
       render json: {status: 500, message: "Unable to create attendance."}
     end
@@ -45,6 +45,6 @@ class Api::V1::AttendancesController < ApplicationController
     end
 
     def attendance_params
-      params.require(:attendance).permit(:check_in, :check_out, :student_id)
+      params.require(:attendance).permit(:check_in, :student_id)
     end
 end
