@@ -23,6 +23,19 @@ Both repos must be cloned in order to succesfully run application. For this back
   rails s -p 3001
   ```
 
+### EndPoints
+Students:
+```
+api/v1/students
+```
+Attendances:
+```
+api/v1/students/:id/attendances
+```
+Rooms:
+```
+api/v1/rooms
+
 ### MIT LICENSE
 Copyright (c) 2011-2019 GitHub Inc.
 
