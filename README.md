@@ -1,6 +1,6 @@
 # README
 
-This is the Rails API backend for "TASC". The frontend for this application can be found [here](https://github.com/jstone18/tasc-frontend).
+This is the Rails API backend for "TASC". The frontend for this application can be found [here](https://github.com/jstone18/tasc-backend).
 TASC is a student management application desgned for after-school programs or any situation where you need to keep track of attendance for an individual child along with personal info.
 
 A profile can be created for a child that includes medical info and emergency contacts. Each profile also contains an attendance record that timestamps each "check-in" and "check-out" for an individual child.
