@@ -45,6 +45,6 @@ class Api::V1::AttendancesController < ApplicationController
     end
 
     def attendance_params
-      params.require(:attendance).permit(:check_in, :student_id)
+      params.require(:attendance).permit(:checkIn, :student_id)
     end
 end

@@ -1,5 +1,5 @@
 class AttendanceSerializer < ActiveModel::Serializer
-  attributes :id, :check_in, :student_id
+  attributes :id, :checkIn, :student_id
 
   attribute :created_at do
     object.created_at.strftime("%A, %d %b %Y %l:%M %p")

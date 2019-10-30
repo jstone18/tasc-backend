@@ -13,7 +13,7 @@ class Api::V1::StudentsController < ApplicationController
 
   def create
     @student = Student.new(student_params)
-
+    
     if @student.save
       render json: @student
     else
@@ -45,11 +45,11 @@ class Api::V1::StudentsController < ApplicationController
 
     def student_params
       params.require(:student).permit(
-        :first_name, :last_name, :age, :room_id, :street_address, :city, 
-        :state, :zip, :dob, :allergies, :medications, :dr_name, :dr_phone, 
-        :contact1_name, :contact1_phone, :contact1_relationship, :contact2_name, 
-        :contact2_phone, :contact2_relationship, :contact3_name, :contact3_phone, 
-        :contact3_relationship
+        :firstName, :lastName, :age, :room_id, :streetAddress, :city, 
+        :state, :zip, :dob, :allergies, :medications, :drName, :drPhone, 
+        :contactOneName, :contactOnePhone, :contactOneRelationship, :contactTwoName, 
+        :contactTwoPhone, :contactTwoRelationship, :contactThreeName, :contactThreePhone, 
+        :contactThreeRelationship
       )
     end
 end

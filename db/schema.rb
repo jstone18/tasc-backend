@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_12_181219) do
+ActiveRecord::Schema.define(version: 2019_10_30_193645) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "hstore"
   enable_extension "plpgsql"
 
   create_table "attendances", force: :cascade do |t|
-    t.boolean "check_in", default: false
+    t.boolean "checkIn", default: false
     t.bigint "student_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -31,30 +31,30 @@ ActiveRecord::Schema.define(version: 2019_10_12_181219) do
   end
 
   create_table "students", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
+    t.string "firstName"
+    t.string "lastName"
     t.integer "age"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "room_id"
-    t.string "street_address"
+    t.string "streetAddress"
     t.string "city"
     t.string "state"
     t.integer "zip"
     t.string "dob"
     t.string "allergies"
     t.string "medications"
-    t.string "dr_name"
-    t.string "dr_phone"
-    t.string "contact1_name"
-    t.string "contact1_phone"
-    t.string "contact1_relationship"
-    t.string "contact2_name"
-    t.string "contact2_phone"
-    t.string "contact2_relationship"
-    t.string "contact3_name"
-    t.string "contact3_phone"
-    t.string "contact3_relationship"
+    t.string "drName"
+    t.string "drPhone"
+    t.string "contactOneName"
+    t.string "contactOnePhone"
+    t.string "contactOneRelationship"
+    t.string "contactTwoName"
+    t.string "contactTwoPhone"
+    t.string "contactTwoRelationship"
+    t.string "contactThreeName"
+    t.string "contactThreePhone"
+    t.string "contactThreeRelationship"
     t.index ["room_id"], name: "index_students_on_room_id"
   end
 
